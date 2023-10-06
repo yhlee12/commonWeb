@@ -1,0 +1,17 @@
+﻿html,body,form {
+    margin:0;
+    padding:0;
+}
+
+div{
+    box-sizing:border-box;
+}
+
+body { 
+        font-size:12px;
+        font-weight:400;
+        color:#353535;
+}
+.hidden-panel{
+    display:none !important;
+}

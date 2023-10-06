@@ -1,0 +1,69 @@
+﻿html,body,form{
+    width:100%;
+    height:100%;
+    background-color:#628DB6;
+}
+#wrap{
+    width:100%;
+    height:100%;
+}
+.id-password-wrap{
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:30px;
+    transform:translate(-50%,-50%);
+    border:1.5px solid #3E5B76;
+    background-color:white;
+    box-shadow: 10px 10px 10px #3e5b76;
+}
+.id-password-image{
+    width:400px;
+    padding:50px 0 10px 0;
+}
+.id-password-image > img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.id-password-content-title{
+    padding-bottom:10px;
+}
+.id-password-input-wrap{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: center;
+    align-content: center;
+    padding:10px;
+    border:1px solid #628DB6;
+    margin-bottom:10px;
+}
+.idPassword-icon{
+    font-size:20px;
+    border-right:1px solid #628DB6;
+    padding-right:10px;
+}
+.id-password-input{
+    outline:none;
+    width:calc(100% - 30px);
+    border:none;
+    padding:8px 10px;
+}
+.id-password-info{
+    width:100%;
+    padding:10px 0 50px 0;
+    text-align:center;
+}
+.id-password-btn{
+    width:100%;
+    padding-top:40px;
+}
+.login-btn{
+    padding:15px 0;
+    text-align:center;
+    color:white;
+    background-color:#628DB6;
+    cursor:pointer;
+}

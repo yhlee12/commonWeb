@@ -1,0 +1,153 @@
+#nav-serialscrolling{
+  width: 40px;
+  height: 480px;
+  position:fixed;
+  top:150px;
+  right:50px;
+  z-index: 99999;
+}
+
+#nav-serialscrolling li {
+  transform: rotate(-90deg);
+}
+#nav-serialscrolling li:nth-child(1){
+  margin-top: 10px;
+}
+#nav-serialscrolling li:nth-child(2){
+  margin-top: 85px;
+}
+#nav-serialscrolling li:nth-child(3){
+  margin-top: 85px;
+}
+#nav-serialscrolling li:nth-child(4){
+  margin-top: 80px;
+}
+#nav-serialscrolling li:nth-child(5){
+  margin-top: 115px;
+}
+#nav-serialscrolling .sub-link{
+  position:relative;
+  display: block;
+  cursor:pointer;
+  font-size: 15px;
+  transition:100ms;
+  color: #f9cb14;
+  font-weight: bold;
+  text-align: center;
+}
+
+#nav-serialscrolling .sub-link:hover,
+#nav-serialscrolling .sub-link:active,
+#nav-serialscrolling .sub-link:focus {
+  opacity:0.8;
+  color: #ec3c0b;
+}
+ #nav-serialscrolling .sub-link.is-current {
+  opacity:1;
+  color: #ec3c0b;
+}
+
+#nav-serialscrolling li:nth-child(1) .sub-link {
+  width: 40px;
+}
+#nav-serialscrolling li:nth-child(2) .sub-link {
+  width: 74px;
+}
+#nav-serialscrolling li:nth-child(3) .sub-link {
+  width: 77px;
+}
+#nav-serialscrolling li:nth-child(4) .sub-link {
+  width: 74px;
+}
+#nav-serialscrolling li:nth-child(5) .sub-link {
+  width: 108px;
+}
+#nav-serialscrolling .sub-link:before,
+#nav-serialscrolling .sub-link:after {
+  content:'';
+  position:absolute;
+  top:30px;
+  right:calc(50% - 4px);
+  transition:100ms;
+}
+#nav-serialscrolling .sub-link:before{
+  width:7px;
+  height:7px;
+  border-radius: 100%;
+  background: #ec3c0b;
+  opacity: 0;
+}
+#nav-serialscrolling .sub-link:after{
+  width:7px;
+  height:7px;
+  border-radius: 100%;
+  background: #ec3c0b;
+  opacity: 0;
+}
+#nav-serialscrolling li:nth-child(1) .sub-link.is-current:before,
+#nav-serialscrolling li:nth-child(2) .sub-link.is-current:before,
+#nav-serialscrolling li:nth-child(3) .sub-link.is-current:before,
+#nav-serialscrolling li:nth-child(4) .sub-link.is-current:before,
+#nav-serialscrolling li:nth-child(5) .sub-link.is-current:before{
+  opacity: 1;
+}
+#nav-serialscrolling li:nth-child(1) .sub-link.is-current:after,
+#nav-serialscrolling li:nth-child(2) .sub-link.is-current:after,
+#nav-serialscrolling li:nth-child(3) .sub-link.is-current:after,
+#nav-serialscrolling li:nth-child(4) .sub-link.is-current:after,
+#nav-serialscrolling li:nth-child(5) .sub-link.is-current:after{
+  opacity: 1;
+}
+
+
+#main {
+  height: 100vh;
+          background: #000;
+      }
+#company {
+          height: 900px;
+          background: #fff;
+      }
+#business {
+          height: 950px;
+          background: #fff;
+      }
+#support {
+          height: 590px;
+          background: #2d2d2d;
+      }
+#information {
+          height: auto;
+          background: #f7f7f7;
+      }
+@media screen and (max-width:990px) {
+  #support {
+    height: 850px;
+    background: #1e40a2;
+}
+}
+@media screen and (max-width:768px) {
+  #nav-serialscrolling{
+    width: 40px;
+    height: 480px;
+    position:fixed;
+    top:50%;
+    right:20px;
+    margin-top: -240px;
+    z-index: 99999;
+    display: none;
+  }
+  #company {
+    height: 700px;
+    background: #fff;
+}
+  #business {
+    height: 750px;
+    background: #fff;
+}
+
+  #information {
+    height: auto;
+    background: #f7f7f7;
+}
+}

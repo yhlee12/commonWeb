@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="그룹_15160" data-name="그룹 15160" transform="translate(-1524 -2980)">
+    <g id="그룹_15140" data-name="그룹 15140" transform="translate(-1420 1675)">
+      <path id="패스_28797" data-name="패스 28797" d="M3012.382,1435.954a4.44,4.44,0,0,1-4.382-4.694v-1.566a4.392,4.392,0,1,1,8.764,0v1.566A4.44,4.44,0,0,1,3012.382,1435.954Z" transform="translate(-55.236 -102.705)" fill="none" stroke="#a5a5a5" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_28798" data-name="패스 28798" d="M2968,1542.146s.719-6.094,1.1-8.764,1.972-4.382,4.382-4.382h2.191l6.732,7.715,7.489,1.049s-.585,4.382-4.361,4.382h-5.478l-5.477-5.523" transform="translate(-20.714 -192.463)" fill="none" stroke="#a5a5a5" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_28799" data-name="패스 28799" d="M3092.564,1526.635l3.757-5.635h19.719l-6.573,10.955h-9.859" transform="translate(-128.221 -185.559)" fill="none" stroke="#a5a5a5" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_322" data-name="선 322" x2="35" transform="translate(2955 1350)" fill="none" stroke="#a5a5a5" stroke-linejoin="round" stroke-width="2"/>
+      <path id="패스_28800" data-name="패스 28800" d="M3102.23,1306h16.354a2.23,2.23,0,0,1,2.23,2.23v11.894a2.973,2.973,0,0,1-2.973,2.973h-9.664l-3.122,4.163a.743.743,0,0,1-1.338-.446V1323.1h-1.487a2.23,2.23,0,0,1-2.23-2.23V1308.23A2.23,2.23,0,0,1,3102.23,1306Z" transform="translate(-134.638)" fill="none" stroke="#a5a5a5" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_323" data-name="선 323" y1="6" transform="translate(2955 1311)" fill="none" stroke="#a5a5a5" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_324" data-name="선 324" x1="3.873" y1="3.873" transform="translate(2947.208 1314.549)" fill="none" stroke="#a5a5a5" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_325" data-name="선 325" x1="5" transform="translate(2944 1322)" fill="none" stroke="#a5a5a5" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

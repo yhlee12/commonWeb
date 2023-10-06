@@ -1,0 +1,646 @@
+
+#company .bx-wrapper {
+  position: relative;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  width: 1300px;
+  height: 100%;
+  top:200px;
+  left: calc(50% - 650px);
+
+}
+
+#company .bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+
+#company .bx-wrapper .bx-pager{
+  position: absolute;
+  top: 550px;
+  left:380px;
+
+}
+
+/* PAGER */
+#company .bx-wrapper .bx-pager::before {
+  position: absolute;
+  top:5px;
+  left:-25px;
+  content: "01";
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+}
+#company .bx-wrapper .bx-pager::after {
+  position: absolute;
+  top:5px;
+  left:70px;
+  content: "06";
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+}
+#company .bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgba(0, 0, 0, 0);
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 3px;
+  outline: 0;
+  position: relative;
+  pointer-events: none;
+  left:10px;
+}
+#company .bx-wrapper .bx-pager.bx-default-pager a::after {
+  content: "";
+  background: rgba(2, 2, 2, 0.325);
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 3px;
+  outline: 0;
+  position: absolute;
+  left: 0px;
+  top:2.5px;
+
+}
+
+
+#company .bx-wrapper .bx-pager.bx-default-pager a:hover,
+#company .bx-wrapper .bx-pager.bx-default-pager a.active,
+#company .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000;
+}
+
+#company .bx-wrapper .bx-pager .bx-pager-item a.active::after{
+  content: "";
+  background: #000;
+
+}
+#company .bx-wrapper .bx-pager .bx-pager-item a.active::before{
+  content: "";
+  background: rgba(2, 2, 2, 0.325);
+
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active::before{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 1250px;
+  height: 3px;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 0px;
+
+}
+
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 250px;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+
+
+}
+
+
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 500px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.2s;
+
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 750px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.3s;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 1000px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.3s;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 1250px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.5s;
+}
+
+
+
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active{
+  position: absolute;
+  top:14px;
+  left: 0px;
+  width: 10px;
+}
+
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active{
+  position: absolute;
+  top:14px;
+  left: 0px;
+  width: 20px;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active{
+  position: absolute;
+  top:14px;
+  left: 0px;
+  width: 30px;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active{
+  position: absolute;
+  top:14px;
+  left: 0px;
+  width: 40px;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active{
+  position: absolute;
+  top:14px;
+  left: 0px;
+  width: 50px;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active{
+  position: absolute;
+  top:14px;
+  left: 0px;
+  width: 60px;
+}
+
+#company .bx-wrapper .bx-pager-item,
+#company .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+#company .bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+#company .bx-wrapper .bx-prev {
+  background: url('images/prev_black.png') no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  top:0;
+  left:0;
+  opacity: 0.5;
+}
+
+#company .bx-wrapper .bx-prev:hover,
+#company .bx-wrapper .bx-prev:focus {
+/*  background-position: 0 0;*/
+  opacity: 1;
+}
+#company .bx-wrapper .bx-next {
+  left: 25px;
+  background: url('images/next_black.png') no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+ 
+}
+#company .bx-wrapper .bx-next:hover,
+#company .bx-wrapper .bx-next:focus {
+/*  background-position: -43px 0;*/
+  opacity: 1;
+}
+#company .bx-wrapper .bx-controls-direction {
+  position: absolute;
+  top: 560px;
+  left:290px;
+}
+#company .bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  outline: 0;
+  width: 9px;
+  height: 12px;
+  text-indent: -9999px;
+  z-index: 9;
+}
+#company .bx-wrapper .bx-controls-direction a.disabled {
+  display: block;
+}
+/* AUTO CONTROLS (START / STOP) */
+#company .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  top:240px;
+  left:50px;
+  z-index: 9999999;
+  display: none;
+}
+#company .bx-wrapper .bx-controls-auto .bx-start {
+  position: absolute;
+  top:1px;
+  left:0;
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 10px;
+  outline: 0;
+  background: url('images/start.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 99;
+}
+
+#company .bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  position: absolute;
+  top:1px;
+  left:0;
+  width: 10px;
+  height: 10px;
+  background: url('images/stop.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 9;
+
+}
+#company .bx-wrapper .bx-controls-auto .bx-stop {
+  position: absolute;
+  top:1px;
+  left:0;
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 10px;
+  outline: 0;
+  background: url('images/stop.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 999;
+}
+
+#company .bx-wrapper .bx-controls-auto .bx-stop.active,
+#company .bx-wrapper .bx-controls-auto .bx-stop:focus {
+  position: absolute;
+  top:1px;
+  left:0;
+  width: 10px;
+  height: 10px;
+  background: url('images/start.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 9;
+
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+#company .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+#company .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+#company .bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+#company .bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+@media screen and (max-width:1280px) {
+  #company .bx-wrapper .bx-pager{
+    position: absolute;
+    left:380px;
+  
+  }
+  #company .bx-wrapper .bx-controls-direction {
+    position: absolute;
+    left:300px;
+  }
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active::before,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active::before{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 1000px;
+  height: 3px;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 200px;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+
+
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 200px;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+
+
+}
+
+
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 400px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.2s;
+
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 600px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.3s;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 800px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.3s;
+}
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active::after{
+  content: "";
+  position: absolute;
+  top:-30px;
+  left: 0px;
+  width: 1000px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -0.5s;
+}
+
+}
+@media screen and (max-width:990px) {
+  #company .bx-wrapper .bx-pager{
+    position: absolute;
+   
+  
+  }
+
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active::before,
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active::before,
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active::before,
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active::before,
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active::before,
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active::before{
+    content: "";
+    position: absolute;
+    top:-30px;
+    left: 0px;
+    width: 750px;
+    height: 3px;
+  }
+ 
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active::after{
+    content: "";
+    position: absolute;
+    top:-30px;
+    left: 0px;
+    width: 150px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+  
+  
+  }
+  
+  
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active::after{
+    content: "";
+    position: absolute;
+    top:-30px;
+    left: 0px;
+    width: 300px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: -0.2s;
+  
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active::after{
+    content: "";
+    position: absolute;
+    top:-30px;
+    left: 0px;
+    width: 450px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: -0.3s;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active::after{
+    content: "";
+    position: absolute;
+    top:-30px;
+    left: 0px;
+    width: 600px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: -0.3s;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active::after{
+    content: "";
+    position: absolute;
+    top:-30px;
+    left: 0px;
+    width: 750px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: -0.5s;
+  }
+}
+@media screen and (max-width:768px) {
+  #company .bx-wrapper {
+    width: 100%;
+    top:0px;
+    left: 0px;
+  }
+  #company .bx-wrapper .bx-pager::before {
+    display: none;
+  }
+  #company .bx-wrapper .bx-pager::after {
+    display: none;
+  }
+  #company .bx-wrapper .bx-controls-direction {
+    
+    display: none;
+ 
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item a.active::after{
+
+  width: 5px;
+  height: 5px;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item a.active::before{
+   display: none;
+  
+  }
+
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.active{
+    position:static;
+    top:11px;
+    left: 0px;
+    width: 6px;
+    height: 6px;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.active{
+    position:static;
+    top:11px;
+    left: 0px;
+    width: 6px;
+    height: 6px;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.active{
+    position:static;
+    top:11px;
+    left: 0px;
+    width: 6px;
+    height: 6px;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.active{
+    position:static;
+    top:11px;
+    left: 0px;
+    width: 6px;
+    height: 6px;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.active{
+    position:static;
+    top:11px;
+    left: 0px;
+    width: 6px;
+    height: 6px;
+  }
+  #company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.active{
+    position:static;
+    top:11px;
+    left: 0px;
+    width: 6px;
+    height: 6px;
+    
+  }
+
+  
+
+  #company .bx-wrapper .bx-pager{
+    position: absolute;
+    top: 380px;
+    left:calc(50% - 68px);
+
+  
+  }
+ 
+  
+
+
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(1) a.ative,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(2) a.ative,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(3) a.ative,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(4) a.ative,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(5) a.ative,
+#company .bx-wrapper .bx-pager .bx-pager-item:nth-child(6) a.ative {
+  background: #000;
+  text-indent: -9999px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  outline: 0;
+  position: relative;
+  pointer-events: none;
+  margin-left: 15px;
+  opacity: 0.3;
+  
+}
+
+#company .bx-wrapper .bx-pager.bx-default-pager a.active::after {
+  display: none;
+}
+#company .bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgba(0, 0, 0, 0);
+  text-indent: -9999px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  outline: 0;
+  position: relative;
+  pointer-events: none;
+  margin-left: 15px;
+  left:0;
+}
+#company .bx-wrapper .bx-pager.bx-default-pager a::after {
+    content:"";
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, 0.485);
+  }
+}
+

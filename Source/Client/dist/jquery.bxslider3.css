@@ -1,0 +1,337 @@
+
+#support .bx-wrapper {
+  position: relative;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+#support .bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+#support .bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+
+#support .bx-wrapper .bx-pager{
+  position: absolute;
+  top: 230px;
+  left:-350px;
+
+}
+
+/* PAGER */
+#support .bx-wrapper .bx-pager::before {
+  position: absolute;
+  top:5px;
+  left:-25px;
+  content: "01";
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+#support .bx-wrapper .bx-pager::after {
+  position: absolute;
+  top:5px;
+  left:70px;
+  content: "06";
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+#support .bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgba(0, 0, 0, 0);
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 3px;
+  outline: 0;
+  position: relative;
+  pointer-events: none;
+}
+#support .bx-wrapper .bx-pager.bx-default-pager a::after {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 10px;
+    height: 3px;
+    opacity: 0.5;
+    background: #fff;
+    opacity: 0.3;
+  }
+
+#support .bx-wrapper .bx-pager.bx-default-pager a:hover,
+#support .bx-wrapper .bx-pager.bx-default-pager a.active,
+#support .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: rgb(255, 255, 255);
+}
+#support .bx-wrapper .bx-pager-item,
+#support .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+#support .bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+#support .bx-wrapper .bx-prev {
+  background: url('images/prev_white.png') no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  top:0;
+  left:0;
+  opacity: 0.5;
+}
+
+#support .bx-wrapper .bx-prev:hover,
+#support .bx-wrapper .bx-prev:focus {
+/*  background-position: 0 0;*/
+  opacity: 1;
+}
+#support .bx-wrapper .bx-next {
+  left: 25px;
+  background: url('images/next_white.png') no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+ 
+}
+#support .bx-wrapper .bx-next:hover,
+#support .bx-wrapper .bx-next:focus {
+/*  background-position: -43px 0;*/
+  opacity: 1;
+}
+#support .bx-wrapper .bx-controls-direction {
+  position: absolute;
+  top:240px;
+  left:-450px;
+}
+#support .bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  outline: 0;
+  width: 9px;
+  height: 12px;
+  text-indent: -9999px;
+  z-index: 9;
+}
+#support .bx-wrapper .bx-controls-direction a.disabled {
+  display: block;
+}
+/* AUTO CONTROLS (START / STOP) */
+#support .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  top:240px;
+  left:-400px;
+
+}
+#support .bx-wrapper .bx-controls-auto .bx-start {
+  position: absolute;
+  top:1px;
+  left:0;
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 10px;
+  outline: 0;
+  background: url('images/start.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 99;
+}
+
+#support .bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  position: absolute;
+  top:1px;
+  left:0;
+  width: 10px;
+  height: 10px;
+  background: url('images/stop.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 9;
+
+}
+#support .bx-wrapper .bx-controls-auto .bx-stop {
+  position: absolute;
+  top:1px;
+  left:0;
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 10px;
+  outline: 0;
+  background: url('images/stop.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 99;
+}
+
+#support .bx-wrapper .bx-controls-auto .bx-stop.active,
+#support .bx-wrapper .bx-controls-auto .bx-stop:focus {
+  position: absolute;
+  top:1px;
+  left:0;
+  width: 10px;
+  height: 10px;
+  background: url('images/start.png') no-repeat 0 0;
+  background-size: 100% 100%;
+  z-index: 9;
+
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+#support .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+#support .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+#support .bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+#support .bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+@media screen and (max-width:1280px) {
+  #support .bx-wrapper .bx-pager{
+  position: absolute;
+  top: 230px;
+  left:-230px;
+
+}
+#support .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  top:240px;
+  left:-280px;
+  z-index: 9999999;
+
+}
+#support .bx-wrapper .bx-controls-direction {
+  position: absolute;
+  top: 240px;
+  left:-330px;
+}
+}
+@media screen and (max-width:990px) {
+  #support .bx-wrapper .bx-pager{
+    position: absolute;
+    top: -50px;
+    left:100px;
+  
+  }
+  #support .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    top:-40px;
+    left:50px;
+    z-index: 9999999;
+  
+  }
+  #support .bx-wrapper .bx-controls-direction {
+    position: absolute;
+    top: -40px;
+    left:0px;
+  }
+ 
+}
+@media screen and (max-width:768px) {
+  #support .bx-wrapper .bx-pager{
+    position: absolute;
+    top: -50px;
+    left:100px;
+  
+  }
+  #support .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    top:-40px;
+    left:50px;
+    z-index: 9999999;
+  
+  }
+  #support .bx-wrapper .bx-controls-direction {
+    position: absolute;
+    top: -40px;
+    left:0px;
+  }
+ 
+}
+@media screen and (max-width:500px) {
+  #support .bx-wrapper .bx-pager{
+    position: absolute;
+    top: 400px;
+    left:calc(50% - 72.5px);
+  
+  }
+  #support .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    top:-40px;
+    left:calc(100% - 10px);
+  
+  }
+  #support .bx-wrapper .bx-controls-direction {
+    position: absolute;
+    top: -40px;
+    left:calc(100% - 60px);
+  }
+  #support .bx-wrapper .bx-pager::before {
+    position: absolute;
+    top:5px;
+    left:-25px;
+    content: "01";
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: none;
+  }
+  #support .bx-wrapper .bx-pager::after {
+    position: absolute;
+    top:5px;
+    left:70px;
+    content: "06";
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: none;
+  }
+
+
+#support .bx-wrapper .bx-pager.bx-default-pager a {
+  background: rgba(0, 0, 0, 0);
+  text-indent: -9999px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  outline: 0;
+  position: relative;
+  pointer-events: none;
+  margin-left: 15px;
+}
+#support .bx-wrapper .bx-pager.bx-default-pager a::after {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    opacity: 0.5;
+    background: #fff;
+    opacity: 0.3;
+  }
+}

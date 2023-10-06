@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AA1AF1E-8E31-49F9-A6F5-BD5410A0D32E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>T2LHomePage</RootNamespace>
+    <AssemblyName>T2LHomePage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Web.ASPxGauges.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxGauges.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxHtmlEditor.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxPivotGrid.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxScheduler.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxSpellChecker.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpreadsheet.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxSpreadsheet.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxThemes.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.ASPxTreeList.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.Web.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraPivotGrid.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraPrinting.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2.Service, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v15.2.Service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2.Web, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraReports.v15.2.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraScheduler.v15.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DevExpress.XtraSpellChecker.v15.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\TravelCoop\TravelCoops\TravelCoopAdmin\TravelCoopAdmin\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MySql.Data.dll" />
+    <Content Include="Source\Admin\AUTH\A_AUTH_AUTHMASTER.aspx" />
+    <Content Include="Source\Admin\AUTH\A_AUTH_AUTHUSE.aspx" />
+    <Content Include="Source\Admin\AUTH\A_AUTH_MENULIST.aspx" />
+    <Content Include="Source\Client\Company\C_COMPANY_SHOPPING.aspx" />
+    <Content Include="Source\Client\CS\C_CS_DETAIL.aspx" />
+    <Content Include="Source\Client\CS\C_CS_REQUEST.aspx" />
+    <Content Include="Source\Client\CS\C_CS_SOLUCTION.aspx" />
+    <Content Include="Source\Client\CS\C_DOWN.aspx" />
+    <Content Include="Source\Client\img\accordion_five.jpg" />
+    <Content Include="Source\Client\img\accordion_five_gray.jpg" />
+    <Content Include="Source\Client\img\accordion_four.jpg" />
+    <Content Include="Source\Client\img\accordion_four_gray.jpg" />
+    <Content Include="Source\Client\img\accordion_one.jpg" />
+    <Content Include="Source\Client\img\accordion_one_gray.jpg" />
+    <Content Include="Source\Client\img\accordion_six.jpg" />
+    <Content Include="Source\Client\img\accordion_six_gray.jpg" />
+    <Content Include="Source\Client\img\accordion_three.jpg" />
+    <Content Include="Source\Client\img\accordion_three_gray.jpg" />
+    <Content Include="Source\Client\img\accordion_two.jpg" />
+    <Content Include="Source\Client\img\accordion_two_gray.jpg" />
+    <Content Include="Source\Client\img\Background_img.jpg" />
+    <Content Include="Source\Client\img\big_bounce.png" />
+    <Content Include="Source\Client\img\business_img.jpg" />
+    <Content Include="Source\Client\img\CEO_IMG.jpg" />
+    <Content Include="Source\Client\img\Cer_eight.jpg" />
+    <Content Include="Source\Client\img\Cer_eight1.jpg" />
+    <Content Include="Source\Client\img\Cer_five.jpg" />
+    <Content Include="Source\Client\img\Cer_four.jpg" />
+    <Content Include="Source\Client\img\Cer_nine.jpg" />
+    <Content Include="Source\Client\img\Cer_one.jpg" />
+    <Content Include="Source\Client\img\Cer_seven.jpg" />
+    <Content Include="Source\Client\img\Cer_six.jpg" />
+    <Content Include="Source\Client\img\Cer_three.jpg" />
+    <Content Include="Source\Client\img\Cer_two.jpg" />
+    <Content Include="Source\Client\img\content_img_five.jpg" />
+    <Content Include="Source\Client\img\content_img_four.png" />
+    <Content Include="Source\Client\img\content_img_one.jpg" />
+    <Content Include="Source\Client\img\content_img_six.png" />
+    <Content Include="Source\Client\img\content_img_three.jpg" />
+    <Content Include="Source\Client\img\content_img_two.jpg" />
+    <Content Include="Source\Client\img\customer_img.jpg" />
+    <Content Include="Source\Client\img\detail.png" />
+    <Content Include="Source\Client\img\Distribution_img.png" />
+    <Content Include="Source\Client\img\he_kim.png" />
+    <Content Include="Source\Client\img\history_five.jpg" />
+    <Content Include="Source\Client\img\history_four.jpg" />
+    <Content Include="Source\Client\img\history_one.jpg" />
+    <Content Include="Source\Client\img\history_second_img.jpg" />
+    <Content Include="Source\Client\img\history_three.jpg" />
+    <Content Include="Source\Client\img\history_two.jpg" />
+    <Content Include="Source\Client\img\intro4.svg" />
+    <Content Include="Source\Client\img\left_small.png" />
+    <Content Include="Source\Client\img\List_01.jpg" />
+    <Content Include="Source\Client\img\List_02.jpg" />
+    <Content Include="Source\Client\img\List_03.jpg" />
+    <Content Include="Source\Client\img\List_04.jpg" />
+    <Content Include="Source\Client\img\list_1.jpg" />
+    <Content Include="Source\Client\img\list_2.jpg" />
+    <Content Include="Source\Client\img\list_view.png" />
+    <Content Include="Source\Client\img\loading.jpg" />
+    <Content Include="Source\Client\img\logist_background.jpg" />
+    <Content Include="Source\Client\img\LO_1.jpg" />
+    <Content Include="Source\Client\img\LO_10.png" />
+    <Content Include="Source\Client\img\LO_11.jpg" />
+    <Content Include="Source\Client\img\LO_12.jpg" />
+    <Content Include="Source\Client\img\LO_13.png" />
+    <Content Include="Source\Client\img\LO_14.png" />
+    <Content Include="Source\Client\img\LO_15.png" />
+    <Content Include="Source\Client\img\LO_16.png" />
+    <Content Include="Source\Client\img\LO_17.png" />
+    <Content Include="Source\Client\img\LO_18.png" />
+    <Content Include="Source\Client\img\LO_2.png" />
+    <Content Include="Source\Client\img\LO_3.png" />
+    <Content Include="Source\Client\img\LO_4.png" />
+    <Content Include="Source\Client\img\LO_5.png" />
+    <Content Include="Source\Client\img\LO_6.png" />
+    <Content Include="Source\Client\img\LO_7.png" />
+    <Content Include="Source\Client\img\LO_8.png" />
+    <Content Include="Source\Client\img\LO_9.png" />
+    <Content Include="Source\Client\img\main_last_img.jpg" />
+    <Content Include="Source\Client\img\park_nam.jpg" />
+    <Content Include="Source\Client\img\recruit.jpg" />
+    <Content Include="Source\Client\img\recruit1-1.svg" />
+    <Content Include="Source\Client\img\recruit1-2.svg" />
+    <Content Include="Source\Client\img\recruit1-3.svg" />
+    <Content Include="Source\Client\img\recruit1-4.svg" />
+    <Content Include="Source\Client\img\recruit1-5.svg" />
+    <Content Include="Source\Client\img\recruit1.svg" />
+    <Content Include="Source\Client\img\recruit2-1.svg" />
+    <Content Include="Source\Client\img\recruit2-2.svg" />
+    <Content Include="Source\Client\img\recruit2-3.svg" />
+    <Content Include="Source\Client\img\recruit2-4.svg" />
+    <Content Include="Source\Client\img\recruit2-5.svg" />
+    <Content Include="Source\Client\img\recruit2-6.svg" />
+    <Content Include="Source\Client\img\recruit2.svg" />
+    <Content Include="Source\Client\img\Recruit_bottom.jpg" />
+    <Content Include="Source\Client\img\recruit_new_img.png" />
+    <Content Include="Source\Client\img\recruit_one.jpg" />
+    <Content Include="Source\Client\img\recruit_three.jpg" />
+    <Content Include="Source\Client\img\recruit_two.png" />
+    <Content Include="Source\Client\img\reference_img.jpg" />
+    <Content Include="Source\Client\img\re_img.png" />
+    <Content Include="Source\Client\img\RE_info.png" />
+    <Content Include="Source\Client\img\right_small.png" />
+    <Content Include="Source\Client\img\Rojistics_background.png" />
+    <Content Include="Source\Client\img\Scale_img.jpg" />
+    <Content Include="Source\Client\img\Shopping_background.jpg" />
+    <Content Include="Source\Client\img\Shopping_img.jpg" />
+    <Content Include="Source\Client\img\Shopping_platform.jpg" />
+    <Content Include="Source\Client\img\Smart_logist_background.jpg" />
+    <Content Include="Source\Client\img\Smart_Shopping_background.jpg" />
+    <Content Include="Source\Client\img\t2l_main_popup.jpg" />
+    <Content Include="Source\Client\img\t2l_soul.png" />
+    <Content Include="Source\Client\img\T2l_tour_five.jpg" />
+    <Content Include="Source\Client\img\T2l_tour_four.jpg" />
+    <Content Include="Source\Client\img\T2l_tour_one.jpg" />
+    <Content Include="Source\Client\img\T2l_tour_six.jpg" />
+    <Content Include="Source\Client\img\T2l_tour_three.jpg" />
+    <Content Include="Source\Client\img\T2l_tour_two.jpg" />
+    <Content Include="Source\Client\img\test_green.jpg" />
+    <Content Include="Source\Client\img\top_ch.png" />
+    <Content Include="Source\Client\img\tour_right_img.png" />
+    <Content Include="Source\Client\img\visual_04.jpg" />
+    <Content Include="Source\Client\Info\C_INFO_RECRUIT.aspx" />
+    <Content Include="Source\Client\Info\C_INFO_REFERENCE.aspx" />
+    <Content Include="Source\Client\video\main-1.mp4" />
+    <Content Include="Source\Client\Web.Master" />
+    <Content Include="Source\Admin\Web.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\t2l_logo1.png" />
+    <Content Include="js\common.js" />
+    <Content Include="js\jquery-2.2.4.min.js" />
+    <Content Include="js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="js\jquery.ui.datepicker-ko.js" />
+    <Content Include="js\Logout.js" />
+    <Content Include="js\menu.js" />
+    <Content Include="js\Tabjs.js" />
+    <Content Include="Source\Admin\css\loginPage.css" />
+    <Content Include="Source\Admin\css\start.css" />
+    <Content Include="Source\Admin\loginPage.aspx" />
+    <Content Include="Source\Admin\start.aspx" />
+    <Content Include="Source\Client\Company\C_COMPANY_LOGISPATEFORM.aspx" />
+    <Content Include="Source\Client\Company\C_COMPANY_THINK.aspx" />
+    <Content Include="Source\Client\Company\C_COMPANY_TOURPATEFORM.aspx" />
+    <Content Include="Source\Client\Company\C_COMPANY_WORK.aspx" />
+    <Content Include="Source\Client\css\accordion-slider.min.css" />
+    <Content Include="Source\Client\css\basic.css" />
+    <Content Include="Source\Client\css\main-re.css" />
+    <Content Include="Source\Client\css\main.css" />
+    <Content Include="Source\Client\css\scrolling-menu.css" />
+    <Content Include="Source\Client\css\sub.css" />
+    <Content Include="Source\Client\CS\C_CS_CONSTRACT.aspx" />
+    <Content Include="Source\Client\CS\C_CS_NOTICE.aspx" />
+    <Content Include="Source\Client\dist\images\arrow_next%402x.png" />
+    <Content Include="Source\Client\dist\images\arrow_prev%402x.png" />
+    <Content Include="Source\Client\dist\images\bx_loader.gif" />
+    <Content Include="Source\Client\dist\images\controls.png" />
+    <Content Include="Source\Client\dist\images\logo.png" />
+    <Content Include="Source\Client\dist\images\mslide-next%402x.png" />
+    <Content Include="Source\Client\dist\images\mslide-next%403x.png" />
+    <Content Include="Source\Client\dist\images\mslide-next.png" />
+    <Content Include="Source\Client\dist\images\mslide-prev%402x.png" />
+    <Content Include="Source\Client\dist\images\mslide-prev%403x.png" />
+    <Content Include="Source\Client\dist\images\mslide-prev.png" />
+    <Content Include="Source\Client\dist\images\next.png" />
+    <Content Include="Source\Client\dist\images\next_black.png" />
+    <Content Include="Source\Client\dist\images\next_white.png" />
+    <Content Include="Source\Client\dist\images\prev.png" />
+    <Content Include="Source\Client\dist\images\prev_black.png" />
+    <Content Include="Source\Client\dist\images\prev_white.png" />
+    <Content Include="Source\Client\dist\images\start.png" />
+    <Content Include="Source\Client\dist\images\stop.png" />
+    <Content Include="Source\Client\dist\jquery.bxslider.js" />
+    <Content Include="Source\Client\dist\jquery.bxslider.min.css" />
+    <Content Include="Source\Client\dist\jquery.bxslider.min.js" />
+    <Content Include="Source\Client\dist\jquery.bxslider1.css" />
+    <Content Include="Source\Client\dist\jquery.bxslider2.css" />
+    <Content Include="Source\Client\dist\jquery.bxslider3.css" />
+    <Content Include="Source\Client\img\hisorty_last_img.jpg" />
+    <Content Include="Source\Client\img\history_first_img.jpg" />
+    <Content Include="Source\Client\img\history_third_img.jpg" />
+    <Content Include="Source\Client\img\horizontal01.png" />
+    <Content Include="Source\Client\img\icon\ani-bg.png" />
+    <Content Include="Source\Client\img\icon\gnb.png" />
+    <Content Include="Source\Client\img\icon\gnb_close.png" />
+    <Content Include="Source\Client\img\icon\gnb_close2.png" />
+    <Content Include="Source\Client\img\icon\next_black.png" />
+    <Content Include="Source\Client\img\icon\next_white.png" />
+    <Content Include="Source\Client\img\icon\prev_black.png" />
+    <Content Include="Source\Client\img\icon\prev_white.png" />
+    <Content Include="Source\Client\img\icon\sphinx_logo.png" />
+    <Content Include="Source\Client\img\icon\start.png" />
+    <Content Include="Source\Client\img\icon\stop.png" />
+    <Content Include="Source\Client\img\icon\updown.png" />
+    <Content Include="Source\Client\img\icon\view.png" />
+    <Content Include="Source\Client\img\icon\view2.png" />
+    <Content Include="Source\Client\img\info.jpg" />
+    <Content Include="Source\Client\img\informataion_page_img.jpg" />
+    <Content Include="Source\Client\img\intro1.svg" />
+    <Content Include="Source\Client\img\intro2.svg" />
+    <Content Include="Source\Client\img\intro3.svg" />
+    <Content Include="Source\Client\img\main_list.png" />
+    <Content Include="Source\Client\img\main_list_gray-re.png" />
+    <Content Include="Source\Client\img\main_list_gray.png" />
+    <Content Include="Source\Client\img\main_list_gray00.png" />
+    <Content Include="Source\Client\img\t2l_info.jpg" />
+    <Content Include="Source\Client\img\tel_view.png" />
+    <Content Include="Source\Client\img\vertical01.png" />
+    <Content Include="Source\Client\img\visual_01.jpg" />
+    <Content Include="Source\Client\img\visual_02.jpg" />
+    <Content Include="Source\Client\Info\C_INFO_CEOSAY.aspx" />
+    <Content Include="Source\Client\Info\C_INFO_CERTIFICATE.aspx" />
+    <Content Include="Source\Client\Info\C_INFO_COMPANY.aspx" />
+    <Content Include="Source\Client\Info\C_INFO_HISTORY.aspx" />
+    <Content Include="Source\Client\Info\C_INFO_INFOMATION.aspx" />
+    <Content Include="Source\Client\Info\C_INFO_LOCATION.aspx" />
+    <Content Include="Source\Client\js\gsap.min.js" />
+    <Content Include="Source\Client\js\jquery-3.6.0.min.js" />
+    <Content Include="Source\Client\js\jquery.accordionSlider.js" />
+    <Content Include="Source\Client\js\jquery.accordionSlider.min.js" />
+    <Content Include="Source\Client\js\jquery.serialscrolling.js" />
+    <Content Include="Source\Client\js\jquery.serialscrolling.min.js" />
+    <Content Include="Source\Client\js\ScrollTrigger.js" />
+    <Content Include="Source\Client\js\ScrollTrigger.min.js" />
+    <Content Include="Source\Client\js\slide.js" />
+    <Content Include="Source\Client\main.aspx" />
+    <Content Include="Source\common\common.css" />
+    <Content Include="Source\common\font.css" />
+    <Content Include="Source\common\Logout.aspx" />
+    <Content Include="Source\Edms\USER_IMAGE\bspark.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\chkim.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\dbkim.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\djjeong.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\dwkang.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\hklim.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\hslee.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jhheo.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jhkimss.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jhpark.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jmlee.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jwahn.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jwchoi.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\jwkang.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\kcjang.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\kskim.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\mkhong.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\nicha.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\sbjeon.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\scyoon.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\sjjeon.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\smkim.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\smpyo.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\tgkim.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\toj.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\tour.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\toy.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\twkim.jpg" />
+    <Content Include="Source\Edms\USER_IMAGE\yhlee.jpeg" />
+    <Content Include="Source\Edms\USER_IMAGE\yjkim.jpeg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="biz\BizBase.cs" />
+    <Compile Include="biz\bizHelper.cs" />
+    <Compile Include="biz\BizUtil.cs" />
+    <Compile Include="biz\ClsData.cs" />
+    <Compile Include="biz\menu.cs" />
+    <Compile Include="biz\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="biz\T2LHomePageinfo.cs" />
+    <Compile Include="dao\DaoSAT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Admin\AUTH\A_AUTH_AUTHMASTER.aspx.cs">
+      <DependentUpon>A_AUTH_AUTHMASTER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Admin\AUTH\A_AUTH_AUTHMASTER.aspx.designer.cs">
+      <DependentUpon>A_AUTH_AUTHMASTER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Admin\AUTH\A_AUTH_AUTHUSE.aspx.cs">
+      <DependentUpon>A_AUTH_AUTHUSE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Admin\AUTH\A_AUTH_AUTHUSE.aspx.designer.cs">
+      <DependentUpon>A_AUTH_AUTHUSE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Admin\AUTH\A_AUTH_MENULIST.aspx.cs">
+      <DependentUpon>A_AUTH_MENULIST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Admin\AUTH\A_AUTH_MENULIST.aspx.designer.cs">
+      <DependentUpon>A_AUTH_MENULIST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Admin\common\adminAuth.cs" />
+    <Compile Include="Source\Admin\common\adminGolbal.cs" />
+    <Compile Include="Source\Admin\loginPage.aspx.cs">
+      <DependentUpon>loginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Admin\loginPage.aspx.designer.cs">
+      <DependentUpon>loginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Admin\start.aspx.cs">
+      <DependentUpon>start.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Admin\start.aspx.designer.cs">
+      <DependentUpon>start.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Admin\Web.Master.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Admin\Web.Master.designer.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_LOGISPATEFORM.aspx.cs">
+      <DependentUpon>C_COMPANY_LOGISPATEFORM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_LOGISPATEFORM.aspx.designer.cs">
+      <DependentUpon>C_COMPANY_LOGISPATEFORM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_SHOPPING.aspx.cs">
+      <DependentUpon>C_COMPANY_SHOPPING.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_SHOPPING.aspx.designer.cs">
+      <DependentUpon>C_COMPANY_SHOPPING.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_THINK.aspx.cs">
+      <DependentUpon>C_COMPANY_THINK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_THINK.aspx.designer.cs">
+      <DependentUpon>C_COMPANY_THINK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_TOURPATEFORM.aspx.cs">
+      <DependentUpon>C_COMPANY_TOURPATEFORM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_TOURPATEFORM.aspx.designer.cs">
+      <DependentUpon>C_COMPANY_TOURPATEFORM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_WORK.aspx.cs">
+      <DependentUpon>C_COMPANY_WORK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Company\C_COMPANY_WORK.aspx.designer.cs">
+      <DependentUpon>C_COMPANY_WORK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_CONSTRACT.aspx.cs">
+      <DependentUpon>C_CS_CONSTRACT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_CONSTRACT.aspx.designer.cs">
+      <DependentUpon>C_CS_CONSTRACT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_DETAIL.aspx.cs">
+      <DependentUpon>C_CS_DETAIL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_DETAIL.aspx.designer.cs">
+      <DependentUpon>C_CS_DETAIL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_NOTICE.aspx.cs">
+      <DependentUpon>C_CS_NOTICE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_NOTICE.aspx.designer.cs">
+      <DependentUpon>C_CS_NOTICE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_REQUEST.aspx.cs">
+      <DependentUpon>C_CS_REQUEST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_REQUEST.aspx.designer.cs">
+      <DependentUpon>C_CS_REQUEST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_SOLUCTION.aspx.cs">
+      <DependentUpon>C_CS_SOLUCTION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_CS_SOLUCTION.aspx.designer.cs">
+      <DependentUpon>C_CS_SOLUCTION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_DOWN.aspx.cs">
+      <DependentUpon>C_DOWN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\CS\C_DOWN.aspx.designer.cs">
+      <DependentUpon>C_DOWN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_CEOSAY.aspx.cs">
+      <DependentUpon>C_INFO_CEOSAY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_CEOSAY.aspx.designer.cs">
+      <DependentUpon>C_INFO_CEOSAY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_CERTIFICATE.aspx.cs">
+      <DependentUpon>C_INFO_CERTIFICATE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_CERTIFICATE.aspx.designer.cs">
+      <DependentUpon>C_INFO_CERTIFICATE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_COMPANY.aspx.cs">
+      <DependentUpon>C_INFO_COMPANY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_COMPANY.aspx.designer.cs">
+      <DependentUpon>C_INFO_COMPANY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_HISTORY.aspx.cs">
+      <DependentUpon>C_INFO_HISTORY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_HISTORY.aspx.designer.cs">
+      <DependentUpon>C_INFO_HISTORY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_INFOMATION.aspx.cs">
+      <DependentUpon>C_INFO_INFOMATION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_INFOMATION.aspx.designer.cs">
+      <DependentUpon>C_INFO_INFOMATION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_LOCATION.aspx.cs">
+      <DependentUpon>C_INFO_LOCATION.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_LOCATION.aspx.designer.cs">
+      <DependentUpon>C_INFO_LOCATION.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_RECRUIT.aspx.cs">
+      <DependentUpon>C_INFO_RECRUIT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_RECRUIT.aspx.designer.cs">
+      <DependentUpon>C_INFO_RECRUIT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_REFERENCE.aspx.cs">
+      <DependentUpon>C_INFO_REFERENCE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Info\C_INFO_REFERENCE.aspx.designer.cs">
+      <DependentUpon>C_INFO_REFERENCE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Source\Client\Web.Master.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\Client\Web.Master.designer.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Source\common\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Source\common\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\downloads\" />
+    <Folder Include="Source\Admin\js\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60534</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60534/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="T2LHomePage.Source.Admin.Web" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="preload" as="style" href="/Source/common/common.css?ver=<%=DateTime.Now.ToString("yyyyMMddHHmmss") %>"/>
+    <link rel="preload" as="style" href="/Source/common/font.css"/>
+    <link rel="stylesheet" href="/Source/common/common.css?ver=<%=DateTime.Now.ToString("yyyyMMddHHmmss") %>"/>
+    <link rel="stylesheet" href="/Source/common/font.css"/>
+    <link href="/Source/Admin/css/start.css"rel="stylesheet"/>
+    <script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="/js/Logout.js"></script>
+    <title>T2L::직원전용 홈페이지</title>
+    <script>
+        const $menu_status = "<%=menu_status%>";
+        const $menu_message = "<%=menu_message%>";
+        const $result_status = "<%=result_status%>";
+        const $result_message = "<%=result_message%>";
+
+        if ($menu_status == "Y") {
+            alert($menu_message);
+            document.location.href = '/Source/common/Logout.aspx';
+        }
+
+        if ($result_status == "Y") {
+            alert($result_message);
+        }
+        //form Submit 로직
+        $(function () {
+            $("#btn-inquery").on('click', function () {
+                $("#flag").val("inquery");
+                $("#form1").submit();
+            });
+            $("#btn-save").on('click', function () {
+                $("#flag").val("save");
+                $("#form1").submit();
+            });
+            $("#btn-delete").on('click', function () {
+                $("#flag").val("delete");
+                $("#form1").submit();
+            });
+            $("#btn-excel").on('click', function () {
+                $("#flag").val("excel");
+                $("#form1").submit();
+            });
+            $("#btn-flag1").on('click', function () {
+                $("#flag").val("flag1");
+                $("#form1").submit();
+            });
+            $("#btn-flag2").on('click', function () {
+                $("#flag").val("flag2");
+                $("#form1").submit();
+            });
+        })
+    </script>
+    <style>
+        /*Master Css 따로 분리하기 애매한 갯수이므로 Master Setting*/
+        .master-top-wrap{
+            padding:5px 20px;
+            display:flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: center;
+            align-content: flex-start;
+            border-bottom:2px solid #f5f5f5;
+        }
+        .btn-field{
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            align-content:center;
+        }
+        .web-btn-mod{
+            margin-right:5px;
+            cursor:pointer;
+            padding:5px 9px;
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            align-content:center;
+            border:1px solid #eaeaea;
+            border-radius:3px;
+            color:#808080;
+        }
+        .web-btn-mod > .material-icons{
+            margin-right:3px;
+        }
+        .web-btn-mod:hover{
+            color:#628DB6;
+        }
+        .mWarper{
+            padding:5px 10px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="hidden-panel">
+        <input type="text" name="flag" id="flag" value="" />
+    </div>
+    <div class="master-top-wrap">
+        <div class="middle-font bold"><%=nowName %></div>
+        <div class="btn-field">
+            <div class="web-btn-mod middle-font" id="btn-inquery"><span class="material-icons">search</span><span>검색</span></div>
+            <%if(_auth.AUTH_EDIT){ %><div class="web-btn-mod middle-font" id="btn-save"><span class="material-icons">article</span><span>저장</span></div><%} %>
+            <%if(_auth.AUTH_EDIT){ %><div class="web-btn-mod middle-font" id="btn-delete"><span class="material-icons">delete</span><span>삭제</span></div><%} %>
+            <%if(_auth.AUTH_EXCEL){ %><div class="web-btn-mod middle-font" id="btn-excel"><span class="material-icons">save_alt</span><span>엑셀</span></div><%} %>
+            <%if(_auth.AUTH_FLAG1){ %><div class="web-btn-mod middle-font" id="btn-flag1"><span class="material-icons">article</span><span><%=_auth.AUTH_FLAG1_NAME == "" ? "버튼1" : _auth.AUTH_FLAG1_NAME %></span></div><%} %>
+            <%if (_auth.AUTH_FLAG2){ %><div class="web-btn-mod middle-font" id="btn-flag2"><span class="material-icons">article</span><span><%=_auth.AUTH_FLAG2_NAME == "" ? "버튼2" : _auth.AUTH_FLAG2_NAME %></span></div><%} %>
+        </div>
+    </div>
+    <div id="mWarper">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

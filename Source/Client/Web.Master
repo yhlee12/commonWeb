@@ -1,0 +1,206 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="T2LHomePage.Source.Client.Web" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/> <%--허정현 다운로드 페이지 관련 추가--%>
+
+    <link rel="preload" as="style" href="/Source/common/common.css?ver=<%=DateTime.Now.ToString("yyyyMMddHHmmss") %>"/>
+    <link rel="preload" as="style" href="/Source/common/font.css"/>
+    <link rel="stylesheet" href="/Source/common/common.css?ver=<%=DateTime.Now.ToString("yyyyMMddHHmmss") %>"/>
+    <link rel="stylesheet" href="/Source/common/font.css"/>
+    <script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="/js/Logout.js"></script>
+    <link rel="stylesheet" href="/Source/Client/css/basic.css"/>
+    <link rel="stylesheet" href="/Source/Client/css/main.css"/>
+    <link rel="stylesheet" href="/Source/Client/css/main-re.css"/>
+    <link rel="stylesheet" href="/Source/Client/css/sub.css"/>
+    <title>T2L::Trade To Logistics</title>
+    <script>
+        $(function () {
+            //Main hover
+            $('.menu100').hover(function () {
+                $('.sub_menu100').stop(true).slideDown('normal');
+            }, function () {
+                $('.sub_menu100').stop(true).slideUp('normal');
+            })
+
+            $('.menu200').hover(function () {
+                $('.sub_menu200').stop(true).slideDown('normal');
+            }, function () {
+                $('.sub_menu200').stop(true).slideUp('normal');
+            })
+
+            $('.menu300').hover(function () {
+                $('.sub_menu300').stop(true).slideDown('normal');
+            }, function () {
+                $('.sub_menu300').stop(true).slideUp('normal');
+            })
+
+            $('.sub_menu').hover(function () {
+                $(this).stop(true).slideDown('normal');
+            }, function () {
+                $(this).stop(true).slideUp('normal');
+            })
+            //hamberger btn
+            $('.gnb_btn').on('click', function () {
+                $('.gnb_blind').css({ display: 'block' });
+                $('#gnb').animate({ right: '0' });
+                $('body').addClass('scrollLock')
+            })
+            $('.gnb_close').on('click', function () {
+                $('#gnb').animate({ right: '-500px' });
+                $('.gnb_blind').css({ display: 'none' });
+                $('body').removeClass('scrollLock')
+            })
+
+            $('.gnb_menu100').click(function () {
+                $('.gnb_sub_menu100').slideToggle('normal');
+                $('.gnb_sub_menu200').slideUp('normal');
+                $('.gnb_sub_menu300').slideUp('normal');
+            });
+            $('.gnb_menu200').click(function () {
+                $('.gnb_sub_menu200').slideToggle('normal');
+                $('.gnb_sub_menu100').slideUp('normal');
+                $('.gnb_sub_menu300').slideUp('normal');
+            });
+            $('.gnb_menu300').click(function () {
+                $('.gnb_sub_menu300').slideToggle('normal');
+                $('.gnb_sub_menu100').slideUp('normal');
+                $('.gnb_sub_menu200').slideUp('normal');
+            });
+            $('.gnb_menu04').click(function () {
+                $('.gnb_sub_menu100').slideUp('normal');
+                $('.gnb_sub_menu200').slideUp('normal');
+                $('.gnb_sub_menu300').slideUp('normal');
+            });
+        })
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header>
+        <div class="align">
+          <div class="header">
+            <div id="logo">
+              <h1><a href="/Source/Client/main.aspx">T2l</a></h1>
+            </div>
+
+            <nav>
+              <ul id="nav">
+                  <%foreach(var item in MenuList){ %>
+                    <li class="menu"><a href="<%=item.Value.subMenu != null ? "#" :item.Value.path+".aspx" %>" class="menu<%=item.Value.key %>"><%=item.Value.title %></a>
+                        <%if(item.Value.subMenu != null && item.Value.subMenu.Count > 0){ %>
+                            <ul class="sub_menu sub_menu<%=item.Value.key %>">
+                                <%foreach(var subitem in item.Value.subMenu){ %>
+                                <li><a href="<%=subitem.otherFlag == false ? subitem.path : subitem.path+".aspx" %>" <%=subitem.otherFlag == false ? "target=\"_blank\"" : "" %>><%=subitem.title %></a></li>
+                                <%} %>
+                            </ul>
+                        <%} %>
+                    </li>
+                  <%} %>
+              </ul>
+            </nav>
+
+            <div class="gnb_btn">
+              <button type="button">메뉴열기</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="gnb_blind">
+        <ul id="gnb">
+          <button type="button" class="gnb_close">메뉴닫기</button>
+            <%foreach(var item in MenuList){ %>
+                <li class="gnb_menu"><a href="<%=item.Value.subMenu != null ? "#" :item.Value.path+".aspx" %>" class="gnb_menu<%=item.Value.key %>"><%=item.Value.title %></a>
+                    <%if(item.Value.subMenu != null && item.Value.subMenu.Count > 0){ %>
+                    <ul class="gnb_sub_menu gnb_sub_menu<%=item.Value.key %>">
+                        <%foreach(var subitem in item.Value.subMenu){ %>
+                            <li><a href="<%=subitem.otherFlag == false ? subitem.path : subitem.path+".aspx" %>" <%=subitem.otherFlag == false ? "target=\"_blank\"" : "" %>><%=subitem.title %></a></li>
+                            <%--<li><a href="<%=subitem.path %>.aspx"><%=subitem.title %></a></li>--%>
+                        <%} %>
+                    </ul>
+                    <%} %>
+                </li>
+            <%} %>
+        </ul>
+      </div>
+      <div id="sub_bg" class="Sub_main" style="background:url(<%=nowPage.imagePath%>) no-repeat center center / cover;">
+        <div class="layout">
+            <div class="sub_bg_txt">
+            <span class="main-txt-large-font">
+                <%=nowPage.title%>
+            </span>
+            <p class="main-txt-small-font"><%=nowPage.subtitle%></p>
+            </div>
+        </div>
+       </div>
+        <%if(nowPage.submenuL != null && nowPage.submenuL.Count > 0){ %>
+        <div id="location">
+            <div class="location_layout">
+
+              <div class="home">
+                <a href="/Source/Client/main.aspx">
+                  <span class="material-icons">home</span>
+                </a>
+              </div>
+              <div class="next">
+                <span class="material-icons">arrow_forward_ios</span>
+              </div>
+              <div class="location_list">
+                <ul class="location_drop">
+                  <li class="location_drop_one">
+                    <div class="dropdown">
+                      <span class="dropbtn middle_font">
+                        <a href="#"><%=nowPage.nowMenu.title %></a>
+                      </span>
+                      <div class="dropdown-content">
+                          <%foreach(var item in nowPage.submenuL){ %>
+                          <a href="<%=item.otherFlag == false ? item.path : item.path+".aspx" %>" <%=item.otherFlag == false ? "target=\"_blank\"" : "" %>><%=item.title %></a>
+                          <%--<a href="<%=item.path %>.aspx" class="common_font"><%=item.title %></a>--%>
+                          <%} %>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <%} %>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+    <footer>
+        <div class="align">
+          <div class="footer-title">
+            <h2>With our technology, <br>To the World, Together.</h2>
+            <p>ⓒ2022.T2L<br>All Rights Reserved</p>
+          </div>
+          <div class="footer-right">
+            <ul>
+              <li><a href="/Source/Client/Info/C_INFO_INFOMATION.aspx">회사소개</a></li>
+            <li><a href="/Source/Client/Company/C_COMPANY_WORK.aspx">사업분야</a></li>
+            <li><a href="/Source/Client/CS/C_CS_NOTICE.aspx">고객센터</a></li>
+            <li><a href="#">직원전용</a></li>
+            </ul>
+            <div class="etc">
+              <p>
+                서울 : 02-786-2471<br>
+                부산 : 070-8821-2471
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </form>
+</body>
+</html>
